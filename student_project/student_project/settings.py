@@ -76,10 +76,12 @@ WSGI_APPLICATION = 'student_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-
-    'default': dj_database_url.config(default='YOUR_POSTGRES_URL_HERE')
-
+    'default': dj_database_url.config(
+        default='postgresql://student_records_db_user:G2IdVL6cLKunBEhqtATBtTVAsMWGnHBc@dpg-d4jtir24d50c73d4de90-a.oregon-postgres.render.com/student_records_db',
+        conn_max_age=600
+    )
 }
+
 
 
 # Password validation
